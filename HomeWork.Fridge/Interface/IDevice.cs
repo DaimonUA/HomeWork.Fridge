@@ -2,6 +2,7 @@
 {
     internal interface IDevice
     {
-        Power State { get; set; }
+        void On();
+        void Off();
     }
 }

@@ -6,7 +6,8 @@ namespace HomeWork.FridgeEmulator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Fridge f = new Fridge();
+            f.On();
         }
     }
 }
