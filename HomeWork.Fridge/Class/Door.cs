@@ -7,7 +7,7 @@ namespace HomeWork.FridgeEmulator
     class Door:IDoor
     {
         private DoorState state;
-        public DoorState State { get; private set; }
+        public DoorState State { get => state; private set => state = value; }
         public Door()
         {
             State = DoorState.Close;

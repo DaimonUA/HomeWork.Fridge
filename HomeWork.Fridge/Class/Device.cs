@@ -2,7 +2,8 @@
 {
     abstract public class Device:IDevice
     {
-        private bool state;
+        protected string name;
+        protected bool state;
         public Power State
         {
             get => state ? Power.On : Power.Off;

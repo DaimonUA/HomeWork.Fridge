@@ -1,12 +1,23 @@
-﻿namespace HomeWork.FridgeEmulator
+﻿
+namespace HomeWork.FridgeEmulator
 {
-    class Fridge : Device
+    class Fridge : DeviceT
     {
-        public Door Door { get;}
-        //public Door Door { get; }
-        public Fridge()
+        public Freeze Freeze { get; }
+        public string Name => name;
+
+        public Fridge(string name= ""):base(1,5)
         {
-            Door = new Door();
+            Freeze = new Freeze(this);
+
+            this.name = name;
+        }
+        static public void GetMenu()
+        {
+            string res;
+            FridgeCommand cmd = new FridgeCommand(id);
+            cmd
+
         }
     }
 }
