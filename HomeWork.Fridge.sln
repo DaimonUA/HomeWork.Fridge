@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork.FridgeEmulator", "HomeWork.Fridge\HomeWork.FridgeEmulator.csproj", "{1F7ADF0A-31BE-44E4-A711-6E12F43473FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F7ADF0A-31BE-44E4-A711-6E12F43473FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F7ADF0A-31BE-44E4-A711-6E12F43473FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F7ADF0A-31BE-44E4-A711-6E12F43473FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F7ADF0A-31BE-44E4-A711-6E12F43473FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {376FB247-83BE-4127-B7CD-D95C698DC008}
+	EndGlobalSection
+EndGlobal
