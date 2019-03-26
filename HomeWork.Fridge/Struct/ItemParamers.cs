@@ -4,11 +4,21 @@ using System.Text;
 
 namespace HomeWork.FridgeEmulator
 {
-    struct ItemParamers
+    //type:
+    //1 - int, 2 - decimal, 3 - int or string
+    //0 or ... -string
+    internal struct ItemParamers
     {
-        string key;
-        string value;
-        Type type;
-        bool mandatory;
+        public string key;
+        public string type;
+        public bool mandatory;
+        public string keycmd;
+        public ItemParamers(string key, string type, bool mandatory,string m="")
+        {
+            this.key = key;
+            this.type = type;
+            this.mandatory = mandatory;
+            keycmd = m;
+        }
     }
 }

@@ -1,27 +1,50 @@
 ﻿using System;
+using System.Collections.Generic;
+using HomeWork.FridgeEmulator;
 
-namespace HomeWork.FridgeEmulator
+namespace HomeWork.FridgeEmulator0
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Fridge f = new Fridge();
-            try
+            Fridge f = new Fridge("холодко");
+            //Console.WriteLine("холодильник {0} с температурой {1}",f.Name,f.IncreaceTemperature(-6));
+            string cd = String.Empty;
+            PrintMenu(cd);
+            while (true)
             {
-                Freeze fr = new Freeze(f);
+                Console.Write("{0}>", cd);
+
+                string cmd = Console.ReadLine().Trim().ToLower();
+                switch (cmd)
+                {
+                    case "q": return;
+                    case "":
+                        PrintMenu(cd);
+                        continue;
+                    default: break;
+                };
+                PrintMenu(cd);
+                string resCmd = DeviceCommand.Run(cmd);
+                if (resCmd != String.Empty)
+                 Console.WriteLine(resCmd);
             }
-            catch (CreateObjectExeption e)
+        }
+
+        static void PrintMenu(string curDevStr)
+        {
+            Console.Clear();
+            Console.WriteLine(DeviceCommand.GetMenuCmd());
+            Console.WriteLine("\nTotal device {0}" +
+                "\n========================",Device.AllDevice.Count);
+            if (DeviceCommand.CurrentDevice != null)
             {
-                Console.WriteLine("Create object error:\n" + e.Message);
+                curDevStr = DeviceCommand.CurrentDevice.Name;
             }
-            Console.WriteLine(f.IncreaceTemperature(2));
-                //Console.WriteLine(fr.Lamp.State);
-            //f.Door.Close();
-            //if (f.Door.State == DoorState.Open) Console.WriteLine("Open");
-            //if (f.Door.State == DoorState.Close) Console.WriteLine("Close");
-            //Freeze freeze = new Freeze();
-            //Lamp lamp = new Lamp((Device)null);
+            else
+                curDevStr = String.Empty;
+
         }
     }
 }

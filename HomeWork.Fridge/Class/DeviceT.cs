@@ -22,12 +22,12 @@ namespace HomeWork.FridgeEmulator
         {
             return temper.Change(this, step);
         }
-        public DeviceT(sbyte minT, sbyte maxT)
+        public DeviceT(string name, sbyte minT, sbyte maxT):base(name)
         {
             temperatureMin = minT;
             temperatureMax = maxT;
             Door = new Door();
-            Lamp = new Lamp(this);
+            Lamp = new Lamp("",this);
         }
 
     }
